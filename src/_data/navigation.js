@@ -1,20 +1,16 @@
 export default {
   top: [
     {
-      text: 'About',
-      url: '/about/'
+      text: 'Highlighted Projects',
+      url: '/highlights/'
     },
     {
-      text: 'Docs',
-      url: '/get-started/'
+      text: 'Other Projects',
+      url: '/other-projects/'
     },
     {
-      text: 'Built with',
-      url: '/built-with/'
-    },
-    {
-      text: 'Blog',
-      url: '/blog/'
+      text: 'Achievements',
+      url: '/achievements/'
     }
   ],
   bottom: [

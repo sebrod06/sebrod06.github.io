@@ -1,0 +1,92 @@
+.hero-image-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* Make each image a square */
+.hero-image-grid img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+  display: block;
+  border-radius: 0.5rem; /* optional */
+}
+
+/* ===== Intro section below hero ===== */
+
+/* ===== Intro section ===== */
+
+.intro-section {
+  padding-block: clamp(3rem, 7vw, 5rem);
+}
+
+.intro-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 260px;
+  grid-template-rows: auto 1fr;
+  column-gap: 3rem;
+  align-items: start;
+  max-width: 1100px;
+  margin-inline: auto;
+}
+
+/* Text sits left, flows down */
+.intro-text {
+  grid-column: 1;
+}
+
+/* Image sits top-right */
+.intro-image {
+  grid-column: 2;
+  grid-row: 1;
+}
+
+.intro-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  border-radius: 0.75rem;
+}
+
+/* Text styling */
+.intro-eyebrow {
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--color-primary);
+}
+
+.intro-text h2 {
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  max-width: 28ch;
+}
+
+.intro-purpose {
+  font-weight: 500;
+}
+
+.intro-heading {
+  font-size: clamp(2rem, 3.2vw, 2.6rem);
+  line-height: 1.15;
+  letter-spacing: -0.01em;
+}
+
+
+/* Mobile: stack cleanly */
+@media (max-width: 768px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .intro-image {
+    grid-column: 1;
+    grid-row: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+
